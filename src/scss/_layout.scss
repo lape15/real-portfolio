@@ -7,13 +7,14 @@ $colors: (
   dark-blue: hsl(233, 12%, 13%),
   pale-red: hsl(13, 100%, 96%),
   burnt-orange: lighten(#f24405, 10%),
-  dark: hsl(228, 39%, 23%)
+  dark: hsl(228, 39%, 23%),
+  black: black
 );
 
 @function color($color-name) {
   @return map-get($colors, $color-name);
 }
-$desktop: 801px;
+$mobile: 300px;
 $ipad: 768px;
 @mixin desktop {
   @media (min-width: #{$desktop}) {
@@ -26,6 +27,42 @@ $ipad: 768px;
   }
 }
 
-.header {
-  border: 2px solid green;
+nav {
+  // border: 2px solid blue;
+  padding: padding + 5;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 2%;
+  .name {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    padding: 6%;
+    // border: 2px solid red;
+    .link {
+      text-decoration: none;
+      // color: color(black);
+      font-family: "Dancing Script";
+      font-size: 2rem;
+      font-size: 500;
+    }
+    .link:hover {
+      color: coral;
+    }
+  }
+  .others {
+    grid-column: 2/4;
+    grid-row: 1/3;
+    padding: 3%;
+    // border: 2px solid green;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+    .link {
+      text-decoration: none;
+      color: color(black);
+      margin-left: 55px;
+    }
+  }
 }

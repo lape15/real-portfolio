@@ -5,17 +5,21 @@ import Header from "./components/Header";
 import "./scss/main.scss";
 
 import { Switch, BrowserRouter, Route } from "react-router-dom";
+import ThemeContextProvider from "./context/themContext";
+// import ThemeToggle from "./components/ThemeToggle";
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Header />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/contact" component={Contact} />
-        </Switch>
-      </BrowserRouter>
+      <ThemeContextProvider>
+        <BrowserRouter>
+          <Header />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/contact" component={Contact} />
+          </Switch>
+        </BrowserRouter>
+      </ThemeContextProvider>
     </div>
   );
 }

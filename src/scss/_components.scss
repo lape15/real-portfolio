@@ -26,18 +26,32 @@ $ipad: 768px;
   }
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+// .App {
+//   background-color: color(dark-blue);
+// }
 
 .App-header {
-  // background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: black;
+  height: 100vh;
+  display: block;
+  text-align: center;
+  padding: 5%;
+  // border: 2px solid red;
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 200;
+  }
+  img {
+    height: 40vh;
+    display: block;
+    text-align: center;
+  }
+}
+
+.letters {
+  font-size: 2rem;
+  font-weight: 400;
+}
+.contact {
+  border: 2px solid red;
+  height: 70vh;
 }
