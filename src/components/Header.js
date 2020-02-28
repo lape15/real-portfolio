@@ -1,11 +1,32 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import { Link } from "react-scroll";
+// import { Link } from "react-scroll";
+import { Link, Events, animateScroll as scroll } from "react-scroll";
+
 import { ThemeContext } from "../context/themContext";
 import ThemeToggle from "./ThemeToggle";
 
 class Header extends React.Component {
   static contextType = ThemeContext;
+
+  componentDidMount() {
+    Events.scrollEvent.register("begin");
+
+    Events.scrollEvent.register("end");
+  }
+
+  scrollToBottom = () => {
+    scroll.scrollToBottom();
+  };
+  scrollToTop = () => {
+    scroll.scrollToTop();
+  };
+
+  componentWillUnmount() {
+    Events.scrollEvent.remove("begin");
+    Events.scrollEvent.remove("end");
+  }
+
   render() {
     console.log(this.context);
     const { isLightTheme, light, dark } = this.context;
@@ -17,17 +38,20 @@ class Header extends React.Component {
             className="link"
             style={{ color: theme.ui }}
             activeClass="active"
-            to="home"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
+            onClick={() => scroll.scrollToTop()}
           >
             A.A
           </Link>
         </span>
         <span className="others">
-          <Link to="/" className="link" style={{ color: theme.ui }}>
+          <Link
+            to="about"
+            spy={true}
+            smooth={true}
+            duration={500}
+            className="link"
+            style={{ color: theme.ui }}
+          >
             About
           </Link>
 
@@ -39,10 +63,7 @@ class Header extends React.Component {
             className="link"
             style={{ color: theme.ui }}
             to="contact"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
+            onClick={() => scroll.scrollToBottom()}
           >
             Contact
           </Link>

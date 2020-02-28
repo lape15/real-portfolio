@@ -4,6 +4,8 @@ import { Spring } from "react-spring/renderprops";
 import { ThemeContext } from "../context/themContext";
 // import Typical from "react-typical";
 import ReactTypingEffect from "react-typing-effect";
+import Contact from "./Contact";
+import About from "./About";
 const Home = () => {
   const { isLightTheme, light, dark } = useContext(ThemeContext);
   const theme = isLightTheme ? light : dark;
@@ -25,6 +27,10 @@ const Home = () => {
       />
 
       <img src={stamp} className="App-logo" alt="logo" />
+
+      <About />
+
+      <Contact />
     </div>
   );
 };

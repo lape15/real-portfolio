@@ -16,7 +16,7 @@ function App() {
           <Header />
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/contact" component={Contact} />
+            {/* <Route path="/contact" component={Contact} /> */}
           </Switch>
         </BrowserRouter>
       </ThemeContextProvider>
