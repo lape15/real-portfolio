@@ -1,31 +1,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-// import { Link } from "react-scroll";
-import { Link, Events, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-router-dom";
+// import { Link, Events, animateScroll as scroll } from "react-scroll";
 
 import { ThemeContext } from "../context/themContext";
 import ThemeToggle from "./ThemeToggle";
 
 class Header extends React.Component {
   static contextType = ThemeContext;
-
-  componentDidMount() {
-    Events.scrollEvent.register("begin");
-
-    Events.scrollEvent.register("end");
-  }
-
-  scrollToBottom = () => {
-    scroll.scrollToBottom();
-  };
-  scrollToTop = () => {
-    scroll.scrollToTop();
-  };
-
-  componentWillUnmount() {
-    Events.scrollEvent.remove("begin");
-    Events.scrollEvent.remove("end");
-  }
 
   render() {
     console.log(this.context);
@@ -34,24 +16,12 @@ class Header extends React.Component {
     return (
       <nav className="header" style={{ background: theme.bg, color: theme.ui }}>
         <span className="name">
-          <Link
-            className="link"
-            style={{ color: theme.ui }}
-            activeClass="active"
-            onClick={() => scroll.scrollToTop()}
-          >
+          <Link className="link" style={{ color: theme.ui }} to="/">
             A.A
           </Link>
         </span>
         <span className="others">
-          <Link
-            to="about"
-            spy={true}
-            smooth={true}
-            duration={500}
-            className="link"
-            style={{ color: theme.ui }}
-          >
+          <Link className="link" style={{ color: theme.ui }}>
             About
           </Link>
 
@@ -59,12 +29,7 @@ class Header extends React.Component {
             Projects
           </Link>
 
-          <Link
-            className="link"
-            style={{ color: theme.ui }}
-            to="contact"
-            onClick={() => scroll.scrollToBottom()}
-          >
+          <Link className="link" style={{ color: theme.ui }} to="/contact">
             Contact
           </Link>
           <a className="link" href="https://github.com/lape15">

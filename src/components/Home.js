@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import stamp from "../assets/stamp.svg";
+// import { ReactComponent as Logo } from "../assets/human.svg";
 import { Spring } from "react-spring/renderprops";
 import { ThemeContext } from "../context/themContext";
-// import Typical from "react-typical";
+import lady from "../assets/walking.gif";
 import ReactTypingEffect from "react-typing-effect";
-import Contact from "./Contact";
-import About from "./About";
+// import { ReactComponent as Logo } from "../assets/girl.jpg";
+
 const Home = () => {
   const { isLightTheme, light, dark } = useContext(ThemeContext);
   const theme = isLightTheme ? light : dark;
@@ -26,11 +26,7 @@ const Home = () => {
         className="letters"
       />
 
-      <img src={stamp} className="App-logo" alt="logo" />
-
-      <About />
-
-      <Contact />
+      <image src={lady} alt="Ladies chilling" className="logo" />
     </div>
   );
 };
