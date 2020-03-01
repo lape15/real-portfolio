@@ -25,3 +25,26 @@ $ipad: 768px;
     @content;
   }
 }
+
+.about {
+  // padding: $padding;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(4/1fr);
+  gap: 2px;
+
+  .profile-img {
+    grid-column: 1/3;
+    background: url("../assets/lape.jpeg") no-repeat;
+    clip-path: circle(20% at 70% 60%);
+    transition: clip-path 5s;
+  }
+  .profile-img:hover {
+    clip-path: circle(80%);
+  }
+  .profile-details {
+    border: 1px solid blue;
+    grid-column: 3/5;
+    background-color: pink;
+  }
+}

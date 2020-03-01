@@ -13,10 +13,11 @@ $colors: (
 @function color($color-name) {
   @return map-get($colors, $color-name);
 }
-$desktop: 801px;
+$mobile: 300px;
+// (min-width: 300px) and (max-width: 800px)
 $ipad: 768px;
-@mixin desktop {
-  @media (min-width: #{$desktop}) {
+@mixin mobile {
+  @media (min-width: #{$mobile})  and (max-width : $ipad) {
     @content;
   }
 }
@@ -26,38 +27,74 @@ $ipad: 768px;
   }
 }
 
-// .App {
-//   background-color: color(dark-blue);
-// }
-
 .App-header {
-  height: 80vh;
-  display: block;
   padding: 2%;
   display: grid;
+  height: 80vh;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
+  @include mobile() {
+    display: block;
+    height: 80vh;
+    // border: 2px solid red;
+  }
   .typing {
-    grid-column: 1/2;
-    grid-row: 1/3;
+    grid-column: 1/3;
+    grid-row: 1/5;
+
+    @include mobile() {
+      height: 20vh;
+    }
   }
 
   .svg-container {
     grid-column: 3/5;
-    grid-row: 1/3;
+    grid-row: 1/5;
     padding: 2%;
     display: block;
     transition: all 5s ease-in-out;
     background: url("../assets/human.svg") 0 0 no-repeat;
 
+    @include mobile() {
+      height: 55vh;
+    }
     p {
       text-align: center;
       font-size: 1.5rem;
       opacity: 0;
       font-weight: bold;
       transition: all 15s ease-in-out infinite;
-      margin-left: 20px;
-      animation: arriving 60s steps(12);
+      margin-left: 70px;
+      animation: arriving 60s steps(12) infinite 4s;
+      @include mobile() {
+        text-align: right;
+        font-size: 1rem;
+        animation: knowMe 60s steps(13, start) infinite;
+        margin-left: 160px;
+        // border: 2px solid blue;
+        @keyframes knowMe {
+          0% {
+            opacity: 0;
+          }
+          25% {
+            opacity: 1;
+            font-weight: 500;
+          }
+          50% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+            font-weight: 600;
+            font-size: 1.5rem;
+          }
+        }
+      }
+      @include ipad() {
+        margin-left: -20px;
+        text-align: center;
+        // border: 2px solid red;
+      }
     }
   }
   @keyframes sliding {
@@ -89,6 +126,7 @@ $ipad: 768px;
   }
 
   .svg-container:hover {
+    transform: scale(1.2rem);
     p:hover {
       opacity: 1;
       transform: scale(1.1);
@@ -98,17 +136,12 @@ $ipad: 768px;
 }
 
 .letters {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 400;
-  margin-top: 0;
-}
-.contact {
-  border: 2px solid red;
-  height: 70vh;
-}
-.about {
-  padding: $padding;
-  height: 90vh;
-  border: 2px solid green;
-  margin-top: 450px;
+
+  @include mobile() {
+    font-size: 1.8rem;
+    font-weight: 600px;
+    margin-top: 10px;
+  }
 }

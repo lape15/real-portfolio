@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ThemeContext } from "../context/themContext";
+import { ThemeContext } from "../context/themeContext";
 import { ReactComponent as Logo } from "../assets/light.svg";
 const ThemeToggle = () => {
   const { toggleTheme } = useContext(ThemeContext);

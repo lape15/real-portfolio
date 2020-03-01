@@ -1,8 +1,7 @@
 import React, { useContext } from "react";
-// import { ReactComponent as Logo } from "../assets/human.svg";
+
 import { Spring } from "react-spring/renderprops";
-import { ThemeContext } from "../context/themContext";
-// import lady from "../assets/walking.gif";
+import { ThemeContext } from "../context/themeContext";
 import ReactTypingEffect from "react-typing-effect";
 import { ReactComponent as Logo } from "../assets/human.svg";
 

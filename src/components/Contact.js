@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ThemeContext } from "../context/themContext";
+import { ThemeContext } from "../context/themeContext";
 
 const Contact = () => {
   const { isLightTheme, light, dark } = useContext(ThemeContext);
