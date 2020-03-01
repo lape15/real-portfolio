@@ -2,9 +2,9 @@ import React, { useContext } from "react";
 // import { ReactComponent as Logo } from "../assets/human.svg";
 import { Spring } from "react-spring/renderprops";
 import { ThemeContext } from "../context/themContext";
-import lady from "../assets/walking.gif";
+// import lady from "../assets/walking.gif";
 import ReactTypingEffect from "react-typing-effect";
-// import { ReactComponent as Logo } from "../assets/girl.jpg";
+import { ReactComponent as Logo } from "../assets/human.svg";
 
 const Home = () => {
   const { isLightTheme, light, dark } = useContext(ThemeContext);
@@ -15,18 +15,22 @@ const Home = () => {
       style={{ background: theme.bg, color: theme.ui }}
       id="home"
     >
-      <ReactTypingEffect
-        text={[
-          "Hello,",
-          "My name is Lape",
-          "I am a front-end Engineer",
-          "I love to build stuff"
-        ]}
-        style={{ color: theme.ui }}
-        className="letters"
-      />
+      <div className="typing">
+        <ReactTypingEffect
+          text={[
+            "Hello,",
+            "My name is Lape",
+            "I am a front-end Engineer",
+            "I love to build stuff"
+          ]}
+          style={{ color: theme.ui }}
+          className="letters"
+        />
+      </div>
 
-      <image src={lady} alt="Ladies chilling" className="logo" />
+      <div className="svg-container">
+        <p style={{ color: theme.ui }}>Find out more about me</p>
+      </div>
     </div>
   );
 };

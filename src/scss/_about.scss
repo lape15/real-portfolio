@@ -1,0 +1,27 @@
+$padding: 5%;
+$colors: (
+  grey-blue: hsl(227, 12%, 61%),
+  light-grey: hsl(0, 0%, 98%),
+  white: #ffffff,
+  list-blue: hsl(228, 45%, 44%),
+  dark-blue: hsl(233, 12%, 13%),
+  pale-red: hsl(13, 100%, 96%),
+  burnt-orange: lighten(#f24405, 10%),
+  dark: hsl(228, 39%, 23%)
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+$desktop: 801px;
+$ipad: 768px;
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+@mixin ipad {
+  @media (min-width: #{$ipad}) {
+    @content;
+  }
+}
