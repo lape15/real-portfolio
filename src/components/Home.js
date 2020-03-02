@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-
+import { Link } from "react-router-dom";
 import { Spring } from "react-spring/renderprops";
 import { ThemeContext } from "../context/themeContext";
 import ReactTypingEffect from "react-typing-effect";
@@ -28,7 +28,9 @@ const Home = () => {
       </div>
 
       <div className="svg-container">
-        <p style={{ color: theme.ui }}>Find out more about me</p>
+        <Link to="/about" className="link-about">
+          <p style={{ color: theme.ui }}>Find out more about me</p>{" "}
+        </Link>
       </div>
     </div>
   );
