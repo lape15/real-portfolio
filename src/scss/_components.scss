@@ -61,15 +61,17 @@ $ipad: 768px;
     .link-about {
       text-decoration: none;
       text-align: right;
-      margin-left: 50px;
+      // border: 2px solid blue;
+      margin-right: 50px;
       p {
-        text-align: right;
+        float: right;
+        text-align: center;
         font-size: 1.5rem;
         opacity: 0;
         // border: 2px solid red;
         font-weight: bold;
-        transition: all 15s ease-in-out infinite;
-        margin-left: 100px;
+        transition: all 5s ease-in-out infinite;
+        margin-left: 30px;
         animation: arriving 60s steps(12) infinite 4s;
         @include mobile() {
           text-align: right;

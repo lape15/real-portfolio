@@ -33,6 +33,7 @@ nav {
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: auto;
   gap: 2%;
+  z-index: 1;
 
   .name {
     grid-column: 1/2;
@@ -47,6 +48,7 @@ nav {
         font-family: "Dancing Script";
         font-size: 2rem;
         font-size: 500;
+        color: pink;
       }
       .link:hover {
         color: coral;

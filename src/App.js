@@ -8,6 +8,7 @@ import About from "./components/About";
 import { Switch, BrowserRouter, Route } from "react-router-dom";
 import ThemeContextProvider from "./context/themeContext";
 // import ThemeToggle from "./components/ThemeToggle";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 function App() {
   return (
@@ -15,11 +16,23 @@ function App() {
       <ThemeContextProvider>
         <BrowserRouter>
           <Header />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/contact" component={Contact} />
-            <Route path="/about" component={About} />
-          </Switch>
+          <Route
+            render={({ location }) => (
+              <TransitionGroup>
+                <CSSTransition
+                  timeout={4500}
+                  classNames="fade"
+                  key={location.key}
+                >
+                  <Switch location={location}>
+                    <Route exact path="/" component={Home} />
+                    <Route path="/contact" component={Contact} />
+                    <Route path="/about" component={About} />
+                  </Switch>
+                </CSSTransition>
+              </TransitionGroup>
+            )}
+          />
         </BrowserRouter>
       </ThemeContextProvider>
     </div>

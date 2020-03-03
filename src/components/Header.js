@@ -27,7 +27,7 @@ class Header extends React.Component {
       <nav className="header" style={{ background: theme.bg, color: theme.ui }}>
         <ul className="name">
           <li>
-            <Link className="link" style={{ color: theme.ui }} to="/">
+            <Link className="link" to="/">
               A.A
             </Link>
           </li>

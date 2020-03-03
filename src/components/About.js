@@ -3,7 +3,7 @@ import { ThemeContext } from "../context/themeContext";
 const About = () => {
   const { isLightTheme, light, dark } = useContext(ThemeContext);
   const theme = isLightTheme ? light : dark;
-  console.log(theme);
+  // console.log(theme);
   return (
     <div
       name="about"
