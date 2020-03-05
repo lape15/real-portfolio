@@ -40,7 +40,7 @@ class Header extends React.Component {
             </Link>
           </li>
           <li>
-            <Link to="/" className="link" style={{ color: theme.ui }}>
+            <Link to="/projects" className="link" style={{ color: theme.ui }}>
               PROJECTS
             </Link>
           </li>

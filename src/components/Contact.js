@@ -6,7 +6,7 @@ const Contact = () => {
   const theme = isLightTheme ? light : dark;
   return (
     <div id="contact" style={{ background: theme.bg }} className="contact">
-      <form>
+      <form data-netlify="true">
         <fieldset>
           <legend>Say hi!</legend>
           <div>

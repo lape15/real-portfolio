@@ -4,11 +4,10 @@ import Home from "./components/Home";
 import Header from "./components/Header";
 import "./scss/main.scss";
 import About from "./components/About";
-
 import { Switch, BrowserRouter, Route } from "react-router-dom";
 import ThemeContextProvider from "./context/themeContext";
-// import ThemeToggle from "./components/ThemeToggle";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
+import Project from "./components/Projects";
 
 function App() {
   return (
@@ -28,6 +27,7 @@ function App() {
                     <Route exact path="/" component={Home} />
                     <Route path="/contact" component={Contact} />
                     <Route path="/about" component={About} />
+                    <Route path="/projects" component={Project} />
                   </Switch>
                 </CSSTransition>
               </TransitionGroup>
