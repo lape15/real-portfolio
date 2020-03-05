@@ -89,10 +89,14 @@ $ipad: 768px;
           border-right: none;
           border-left: none;
           border-bottom: 1px solid black;
+          @include mobile() {
+            margin-right: 0;
+          }
         }
       }
       div {
         text-align: center;
+        width: 250px;
 
         button {
           background-color: color(yellow);
