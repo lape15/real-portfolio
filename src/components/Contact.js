@@ -7,44 +7,38 @@ const Contact = () => {
   return (
     <div id="contact" style={{ background: theme.bg }} className="contact">
       <form>
-        <div>
+        <fieldset>
+          <legend>Say hi!</legend>
           <div>
-            <label style={{ color: theme.ui }}>Full Name</label>
-          </div>
-          <div>
-            <input type="text" value="Jane Doe" style={{ color: theme.ui }} />
-          </div>
-        </div>
-        <div>
-          <div>
-            <label style={{ color: theme.ui }}>Password</label>
-          </div>
-          <div>
+            <label style={{ color: theme.ui }}>Name</label>
+
             <input
-              type="password"
-              placeholder="******************"
+              type="text"
+              placeholder="Jane Doe"
               style={{ color: theme.ui }}
             />
           </div>
-        </div>
-        <div>
-          <div></div>
-          <label>
-            <input type="checkbox" style={{ color: theme.ui }} />
-            <span>Send me your newsletter!</span>
-          </label>
-        </div>
-        <div>
-          <div></div>
           <div>
-            <button
-              type="submit"
-              style={{ color: theme.ui, background: theme.bg }}
-            >
-              Sign Up
+            <label style={{ color: theme.ui }}>Email</label>
+            <input
+              type="email"
+              placeholder="email@email.com"
+              style={{ color: theme.ui }}
+            />
+          </div>
+          <div>
+            <label style={{ color: theme.ui }} className="label">
+              Hit me up
+            </label>
+            <textarea placeholder="Drop your messages here"></textarea>
+          </div>
+
+          <div className="btn">
+            <button type="submit" style={{ color: theme.ui }}>
+              Send!
             </button>
           </div>
-        </div>
+        </fieldset>
       </form>
     </div>
   );

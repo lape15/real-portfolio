@@ -4,35 +4,40 @@ import { Spring } from "react-spring/renderprops";
 import { ThemeContext } from "../context/themeContext";
 import ReactTypingEffect from "react-typing-effect";
 import { ReactComponent as Logo } from "../assets/human.svg";
-
+import Contact from "./Contact";
+import About from "./About";
 const Home = () => {
   const { isLightTheme, light, dark } = useContext(ThemeContext);
   const theme = isLightTheme ? light : dark;
   return (
-    <div
-      className="App-header"
-      style={{ background: theme.bg, color: theme.ui }}
-      id="home"
-    >
-      <div className="typing">
-        <ReactTypingEffect
-          text={[
-            "Hello,",
-            "My name is Lape",
-            "I am a front-end Engineer",
-            "I love to build stuff"
-          ]}
-          style={{ color: theme.ui }}
-          className="letters"
-        />
-      </div>
+    <>
+      <div
+        className="App-header"
+        style={{ background: theme.bg, color: theme.ui }}
+        id="home"
+      >
+        <div className="typing">
+          <ReactTypingEffect
+            text={[
+              "Hello,",
+              "My name is Lape",
+              "I am a front-end Engineer",
+              "I love to build stuff"
+            ]}
+            style={{ color: theme.ui }}
+            className="letters"
+          />
+        </div>
 
-      <div className="svg-container">
-        <Link to="/about" className="link-about">
-          <p style={{ color: theme.ui }}>Find out more about me</p>{" "}
-        </Link>
+        <div className="svg-container">
+          <Link to="/about" className="link-about">
+            <p style={{ color: theme.ui }}>Find out more about me</p>{" "}
+          </Link>
+        </div>
       </div>
-    </div>
+      <About />
+      <Contact />
+    </>
   );
 };
 export default Home;
