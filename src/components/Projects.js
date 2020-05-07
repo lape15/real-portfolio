@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../context/themeContext";
 import landing from "../assets/landing.png";
+import todoApp from "../assets/todoApp.png";
 
 const Project = () => {
   const { isLightTheme, light, dark } = useContext(ThemeContext);
@@ -8,17 +9,22 @@ const Project = () => {
 
   return (
     <div style={{ background: theme.bg }} className="projects">
-      <h1 style={{ color: theme.ui }}>Holla</h1>
-
       <div className="project-one">
         <img src={landing} alt="hi" />
-        <div className="project-one details">
+        <div className="project-details">
           <p>Holaaaa</p>
           <p>Leooooo</p>
           <p>Looon</p>
         </div>
       </div>
-      <div></div>
+      <div className="project-two">
+        <img src={todoApp} alt="A basic todo" />
+        <div className="project-details">
+          <p>Holaaaa</p>
+          <p>Leooooo</p>
+          <p>Looon</p>
+        </div>
+      </div>
     </div>
   );
 };

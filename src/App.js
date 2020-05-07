@@ -24,7 +24,7 @@ function App() {
                   key={location.key}
                 >
                   <Switch location={location}>
-                    <Route exact path="/" component={Home} />
+                    <Route exact path="/(|home)/" component={Home} />
                     <Route path="/contact" component={Contact} />
                     <Route path="/about" component={About} />
                     <Route path="/projects" component={Project} />

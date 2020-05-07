@@ -1,13 +1,17 @@
 .projects {
-  height: 90vh;
+  height: 100vh;
   border: 2px solid red;
-  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.project-one {
-  border: 2px solid blue;
+.project-one,
+.project-two {
+  border: 2px solid green;
   img {
-    height: 170px;
+    height: 200px;
     // border: 2px solid purple;
   }
 }

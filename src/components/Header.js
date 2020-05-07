@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 // import { Link, Events, animateScroll as scroll } from "react-scroll";
 
 import { ThemeContext } from "../context/themeContext";
@@ -20,34 +20,38 @@ class Header extends React.Component {
   };
   render() {
     const { isMenuOpen } = this.state;
-    console.log(this.state);
+    // console.log(this.state);
     const { isLightTheme, light, dark } = this.context;
     const theme = isLightTheme ? light : dark;
     return (
       <nav className="header" style={{ background: theme.bg, color: theme.ui }}>
         <ul className="name">
           <li>
-            <Link className="link" to="/">
+            <NavLink className="link" to="/home">
               A.A
-            </Link>
+            </NavLink>
           </li>
         </ul>
 
         <ul className={`others hidden ${isMenuOpen ? "show" : "hide"}`}>
           <li>
-            <Link className="link" style={{ color: theme.ui }} to="/about">
+            <NavLink className="link" style={{ color: theme.ui }} to="/about">
               ABOUT
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/projects" className="link" style={{ color: theme.ui }}>
+            <NavLink
+              to="/projects"
+              className="link"
+              style={{ color: theme.ui }}
+            >
               PROJECTS
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link className="link" style={{ color: theme.ui }} to="/contact">
+            <NavLink className="link" style={{ color: theme.ui }} to="/contact">
               CONTACT
-            </Link>
+            </NavLink>
           </li>
           <li>
             <a className="link" href="https://github.com/lape15">

@@ -7,7 +7,7 @@ const Contact = () => {
   const theme = isLightTheme ? light : dark;
 
   const handleChange = e => {
-    setForm({ [e.target.name]: e.target.value });
+    setForm(e.target.value);
   };
 
   const handleSubmit = e => {
@@ -61,7 +61,7 @@ const Contact = () => {
               required
             ></textarea>
           </div>
-
+          <div></div>
           <div className="btn">
             <button type="submit" style={{ color: theme.ui }}>
               Send!

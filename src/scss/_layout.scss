@@ -9,7 +9,8 @@ $colors: (
   burnt-orange: lighten(#f24405, 10%),
   dark: hsl(228, 39%, 23%),
   black: black,
-  light-yellow: lighten(#ff9b21, 40%)
+  light-yellow: lighten(#ff9b21, 40%),
+  yellowe: #ff9b21
 );
 
 @function color($color-name) {
@@ -49,10 +50,14 @@ nav {
         font-family: "Dancing Script";
         font-size: 2rem;
         font-size: 500;
-        color: pink;
+        color: color(yellowe);
+        transition: color 3s ease-in;
       }
       .link:hover {
         color: coral;
+      }
+      .active {
+        text-decoration: underline color(yellowe);
       }
     }
   }
@@ -70,14 +75,16 @@ nav {
 
       .link {
         text-decoration: none;
-        color: color(black);
+        color: color(yellowe);
         margin-left: 85px;
         text-decoration: none;
-        transition: text-decoration 3s ease-in;
+        transition: color 3s ease-in;
       }
       .link:hover {
         color: coral;
-        text-decoration: underline sandybrown;
+      }
+      .active {
+        text-decoration: underline color(yellowe);
       }
     }
   }
