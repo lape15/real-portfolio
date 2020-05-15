@@ -41,7 +41,7 @@ class Header extends React.Component {
               spy={true}
               smooth={true}
               hashSpy={true}
-              offset={-70}
+              offset={0}
               duration={500}
               delay={0}
               isDynamic={true}
@@ -71,7 +71,7 @@ class Header extends React.Component {
               spy={true}
               smooth={true}
               hashSpy={true}
-              offset={-70}
+              offset={0}
               duration={500}
               delay={0}
               isDynamic={true}
