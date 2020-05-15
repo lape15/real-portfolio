@@ -12,7 +12,11 @@ const Project = () => {
   const theme = isLightTheme ? light : dark;
 
   return (
-    <div style={{ background: theme.bg, color: theme.ui }} className="projects">
+    <div
+      style={{ background: theme.bg, color: theme.ui }}
+      className="projects"
+      id="projects"
+    >
       <div className="project-one">
         <h3>Insure </h3>
         <p>A homepage for an insurance company</p>

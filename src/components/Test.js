@@ -35,24 +35,9 @@ class Header extends React.Component {
 
         <ul className={`others hidden ${isMenuOpen ? "show" : "hide"}`}>
           <li>
-            <Link
-              activeClass="active"
-              to="about"
-              spy={true}
-              smooth={true}
-              hashSpy={true}
-              offset={-70}
-              duration={500}
-              delay={0}
-              isDynamic={true}
-              onSetActive={this.handleSetActive}
-              onSetInactive={this.handleSetInactive}
-              ignoreCancelEvents={false}
-              className="link"
-              style={{ color: theme.ui }}
-            >
+            <NavLink className="link" style={{ color: theme.ui }} to="/about">
               ABOUT
-            </Link>
+            </NavLink>
           </li>
           <li>
             <NavLink
@@ -63,26 +48,10 @@ class Header extends React.Component {
               PROJECTS
             </NavLink>
           </li>
-
           <li>
-            <Link
-              activeClass="active"
-              to="contact"
-              spy={true}
-              smooth={true}
-              hashSpy={true}
-              offset={-70}
-              duration={500}
-              delay={0}
-              isDynamic={true}
-              onSetActive={this.handleSetActive}
-              onSetInactive={this.handleSetInactive}
-              ignoreCancelEvents={false}
-              className="link"
-              style={{ color: theme.ui }}
-            >
+            <NavLink className="link" style={{ color: theme.ui }} to="/contact">
               CONTACT
-            </Link>
+            </NavLink>
           </li>
           <li>
             <a className="link" href="https://github.com/lape15">

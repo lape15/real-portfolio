@@ -31,18 +31,29 @@ $ipad: 768px;
 
 .about {
   // padding: $padding;
-  height: 90vh;
+  height: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  // border: 2px solid green;
   gap: 0;
 
   .profile-img {
     grid-column: 1/3;
     grid-row: 1/3;
-    background: url("../assets/lape.jpeg") no-repeat;
+
     background-position: center;
-    clip-path: circle(20% at 57% 25%);
-    transition: clip-path 5s;
+    background-size: 700px 600px;
+    transition: transform 5s;
+    text-align: center;
+    img {
+      width: 600px;
+      height: 600px;
+      @include mobile() {
+        width: 370px;
+        height: 300px;
+        border-radius: 5px;
+      }
+    }
     p {
       text-align: center;
       font-size: 1.5rem;
@@ -55,10 +66,12 @@ $ipad: 768px;
     }
   }
   .profile-img:hover {
-    clip-path: circle(80%);
+    // clip-path: circle(80%);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
   }
   .profile-details {
-    padding: $padding;
+    padding: $padding - 1;
     grid-column: 3/5;
     grid-row: 1/3;
     text-align: center;
@@ -86,8 +99,9 @@ $ipad: 768px;
     }
   }
   .profile-details:hover {
-    transform: scale(1.1);
-    background-color: color(pale-red);
+    transform: scale(0.8);
+    background-color: #ff7f50;
+    // perspective: 1000px;
   }
 
   @include mobile() {
@@ -101,9 +115,9 @@ $ipad: 768px;
       grid-column: 1/5;
       grid-row: 1/9;
       // border: 1px solid green;
-      background: url("../assets//smiling-lape.jpeg") 0 0 no-repeat;
-      background-size: 100% 100%;
-      clip-path: none;
+      // background: url("../assets//smiling-lape.jpeg") 0 0 no-repeat;
+      // background-size: 100% 100%;
+      // clip-path: none;
       // animation: photoMove 5s steps(6) alternate infinite;
     }
     .profile-details {
@@ -128,13 +142,13 @@ $ipad: 768px;
   }
 }
 
-@keyframes photoMove {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background: url("../assets/angry.jpeg");
-    background-position: 0 0;
-    background-size: 100% 100%;
-  }
-}
+// @keyframes photoMove {
+//   0% {
+//     background-position: 0 0;
+//   }
+//   100% {
+//     background: url("../assets/angry.jpeg");
+//     background-position: 0 0;
+//     background-size: 100% 100%;
+//   }
+// }

@@ -52,6 +52,7 @@ nav {
         font-size: 500;
         color: color(yellowe);
         transition: color 3s ease-in;
+        cursor: pointer;
       }
       .link:hover {
         color: coral;
@@ -79,6 +80,7 @@ nav {
         margin-left: 85px;
         text-decoration: none;
         transition: color 3s ease-in;
+        cursor: pointer;
       }
       .link:hover {
         color: coral;
