@@ -35,8 +35,6 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      <About />
-      <Contact />
     </>
   );
 };

@@ -7,6 +7,7 @@ import covid from "../assets/Covid.png";
 import mobile from "../assets/Mobile.png";
 import crown from "../assets/crown.png";
 import taxmingo from "../assets/taxmingo.png";
+import budget from "../assets/budgetIt.png";
 const Project = () => {
   const { isLightTheme, light, dark } = useContext(ThemeContext);
   const theme = isLightTheme ? light : dark;
@@ -17,6 +18,44 @@ const Project = () => {
       className="projects"
       id="projects"
     >
+      <div className="project-one">
+        <h3>BudgetIt </h3>
+        <p>A budgeting app to track spending</p>
+        <img src={budget} alt="hi" />
+        <div className="project-details">
+          {" "}
+          <ul>
+            <li>React</li>
+
+            <li>SCSS</li>
+            <li>HTML</li>
+            <li>javaScript</li>
+          </ul>
+          <div className="demo">
+            <button style={{ background: theme.bg }}>
+              <a
+                href="https://github.com/lape15/budget-app"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: theme.ui }}
+              >
+                Github
+              </a>
+            </button>
+            <button style={{ background: theme.bg }}>
+              <a
+                href="https://budgetit.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: theme.ui }}
+              >
+                LiveApp
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+
       <div className="project-one">
         <h3>Insure </h3>
         <p>A homepage for an insurance company</p>

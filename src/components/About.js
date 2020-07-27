@@ -29,16 +29,9 @@ const About = () => {
           <li>CSS/SCSS/BOOTSTRAP</li>
           <li>javaScript</li>
           <li>React</li>
+          <li>GraphQl</li>
+          <li>Redux</li>
           <li>TailwindCss</li>
-          <li>
-            <a
-              href="https://gist.github.com/lape15/e573a348eb0fb413ea5f2c9ae3cbdf4d"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Resume
-            </a>
-          </li>
         </ul>
       </div>
     </div>

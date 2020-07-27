@@ -35,24 +35,9 @@ class Header extends React.Component {
 
         <ul className={`others hidden ${isMenuOpen ? "show" : "hide"}`}>
           <li>
-            <Link
-              activeClass="active"
-              to="about"
-              spy={true}
-              smooth={true}
-              hashSpy={true}
-              offset={0}
-              duration={500}
-              delay={0}
-              isDynamic={true}
-              onSetActive={this.handleSetActive}
-              onSetInactive={this.handleSetInactive}
-              ignoreCancelEvents={false}
-              className="link"
-              style={{ color: theme.ui }}
-            >
+            <NavLink to="/about" className="link" style={{ color: theme.ui }}>
               ABOUT
-            </Link>
+            </NavLink>
           </li>
           <li>
             <NavLink
@@ -65,27 +50,12 @@ class Header extends React.Component {
           </li>
 
           <li>
-            <Link
-              activeClass="active"
-              to="contact"
-              spy={true}
-              smooth={true}
-              hashSpy={true}
-              offset={0}
-              duration={500}
-              delay={0}
-              isDynamic={true}
-              onSetActive={this.handleSetActive}
-              onSetInactive={this.handleSetInactive}
-              ignoreCancelEvents={false}
-              className="link"
-              style={{ color: theme.ui }}
-            >
+            <NavLink to="/contact" className="link" style={{ color: theme.ui }}>
               CONTACT
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <a className="link" href="https://github.com/lape15">
+            <a className="link" href="https://github.com/lape15" title="Github">
               <i class="fab fa-github" style={{ color: theme.ui }}></i>
             </a>
           </li>
@@ -93,6 +63,7 @@ class Header extends React.Component {
             <a
               className="link"
               href="https://https://www.linkedin.com/in/alarape-akintan-a80188188/"
+              title="linkedin"
             >
               <i class="fab fa-linkedin" style={{ color: theme.ui }}></i>
             </a>
