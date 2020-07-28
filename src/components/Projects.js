@@ -273,7 +273,19 @@ const Project = () => {
             <li>javaScript</li>
             <li>GraphQl</li>
           </ul>
-          <div className="demo">COMING SOON!!</div>
+          <div className="demo">
+            {" "}
+            <button style={{ background: theme.bg }}>
+              <a
+                href="http://taxmingo.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: theme.ui }}
+              >
+                LiveApp
+              </a>
+            </button>
+          </div>
         </div>
       </div>
     </div>
