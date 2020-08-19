@@ -233,14 +233,14 @@ const Project = () => {
         <div className="project-details">
           <ul>
             <li>React</li>
-            <li>Tailwind CSS</li>
+            <li>SCSS</li>
             <li>javaScript</li>
             <li>Redux</li>
           </ul>
           <div className="demo">
             <button style={{ background: theme.bg }}>
               <a
-                href="https://github.com/lape15/emperor-chopsticks"
+                href="https://shopp-app.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: theme.ui }}
